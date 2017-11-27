@@ -1,0 +1,22 @@
+{
+  "name": "have-you-heard",
+  "version": "1.0.0",
+  "description": "Sends Facebook Messenger messages at 4:20am in the morning asking if the recipient has heard of common band names.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adammcarth/have-you-heard.git"
+  },
+  "author": "Adam McArthur",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/adammcarth/have-you-heard/issues"
+  },
+  "homepage": "https://github.com/adammcarth/have-you-heard#readme",
+  "dependencies": {
+    "facebook-chat-api": "^1.4.0"
+  }
+}
