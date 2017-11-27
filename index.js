@@ -21,7 +21,7 @@ login({email: fbConfig.email, password: fbConfig.password}, (err, api) => {
     api.sendMessage(messageToSend, id);
   });
 
-  Update the data lists before closing this session.
+  // Update the data lists before closing this session.
   sent.push(messageToSend);
   i = phrases.indexOf(messageToSend);
   phrases.splice(i, 1);
