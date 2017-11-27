@@ -1,7 +1,7 @@
 {
   "name": "have-you-heard",
   "version": "1.0.0",
-  "description": "Sends Facebook Messenger messages at 4:20am in the morning asking if the recipient has heard of common band names.",
+  "description": "Sends obnoxious Facebook messages at 4:20am in the morning asking if the recipient has heard of common band names.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
