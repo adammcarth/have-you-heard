@@ -15,17 +15,20 @@ login({email: fbConfig.email, password: fbConfig.password}, (err, api) => {
   if (err) return console.error(err);
 
   messageToSend = phrases[0];
-  console.log("Sending: " + messageToSend);
+
+  if (messageToSend) {
+    console.log("Sending: " + messageToSend);
  
-  fbConfig.recipients.forEach((id) => {
-    api.sendMessage(messageToSend, id);
-  });
+    fbConfig.recipients.forEach((id) => {
+      api.sendMessage(messageToSend, id);
+    });
 
-  // Update the data lists before closing this session.
-  sent.push(messageToSend);
-  i = phrases.indexOf(messageToSend);
-  phrases.splice(i, 1);
+    // Update the data lists before closing this session.
+    sent.push(messageToSend);
+    i = phrases.indexOf(messageToSend);
+    phrases.splice(i, 1);
 
-  fs.writeFileSync(path.join(__dirname, "./config/phrases.json"), JSON.stringify({phrases: phrases}));
-  fs.writeFileSync(path.join(__dirname, "./config/_sent.json"), JSON.stringify({sent: sent}));
+    fs.writeFileSync(path.join(__dirname, "./config/phrases.json"), JSON.stringify({phrases: phrases}));
+    fs.writeFileSync(path.join(__dirname, "./config/_sent.json"), JSON.stringify({sent: sent}));
+  }
 });
